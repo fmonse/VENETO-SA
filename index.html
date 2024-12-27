@@ -3,45 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario de Productos</title>
+    <title>Pedido de Productos</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 </head>
 <body>
-    <div class="container">
-        <h1>Pedido de Productos</h1>
-        
-        <!-- Formulario para datos generales -->
-        <div>
+    <h1>Pedido de Productos</h1>
+    <div class="header-container">
+        <div class="form-group">
             <label for="razonSocial">Razón Social:</label>
             <input type="text" id="razonSocial" placeholder="Ingrese razón social">
-
+        </div>
+        <div class="form-group">
             <label for="fechaEntrega">Fecha de Entrega:</label>
             <input type="date" id="fechaEntrega">
         </div>
-
-        <!-- Campo de búsqueda -->
-        <div>
-            <input type="text" id="search" placeholder="Buscar producto...">
-        </div>
-
-        <!-- Tabla de productos -->
-        <table>
-            <thead>
-                <tr>
-                    <th>Código</th>
-                    <th>Producto</th>
-                    <th>Descripción</th>
-                    <th>Cantidad</th>
-                </tr>
-            </thead>
-            <tbody id="productTable">
-                <!-- Los productos se generarán dinámicamente desde JavaScript -->
-            </tbody>
-        </table>
-
-        <!-- Botón para enviar el pedido -->
-        <button id="submitOrder">Enviar Pedido</button>
+        <input type="search" id="searchInput" placeholder="Buscar productos...">
     </div>
+
+    <table id="productTable">
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Producto</th>
+                <th>Descripción</th>
+                <th>Cantidad</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <h2>Pedido Parcial</h2>
+    <table id="partialOrder">
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Producto</th>
+                <th>Descripción</th>
+                <th>Cantidad</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <button id="submitOrder">Enviar Pedido</button>
+
     <script src="sxript.js"></script>
 </body>
 </html>
