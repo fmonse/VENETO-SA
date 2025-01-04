@@ -8,6 +8,7 @@ body {
     padding: 20px;
     background-color: #f9f9f9;
     color: #333;
+    background-image: url('fondo.jpg'); /* Cambia 'fondo.jpg' por la ruta de tu imagen */;
 }
 
 /* Encabezado */
